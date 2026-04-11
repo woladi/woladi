@@ -42,8 +42,8 @@ Apple Vision OCR & image analysis for Node.js — native, fast, offline, no API 
 npm install macos-vision
 ```
 
-### AiSort
-AI-powered document sorter using Apple Vision and Ollama. Classifies and organizes files using local LLMs — no cloud, no subscriptions.
+### [AiSort](https://github.com/woladi/AiSort) *(early stage)*
+Automatically tags and annotates files using `macos-vision-mcp` and local LLMs — no cloud, no subscriptions. Files never leave your machine. Feed it a better model and it can also suggest smarter folder structures for your documents.
 
 ## 💻 Tech Stack
 
