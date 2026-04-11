@@ -21,6 +21,13 @@ Architected a modern insurance PWA at CGI achieving a **95% Google Page Speed sc
 
 ## 🛠 Open Source
 
+### [pseudonym-mcp](https://github.com/woladi/pseudonym-mcp)
+Local privacy proxy for LLMs — replaces PII with reversible tokens (`[PERSON:1]`, `[PESEL:1]`, `[CREDIT_CARD:1]`) before your prompt ever reaches the cloud, then restores original values in the response. GDPR-compliant pseudonymisation, fully offline, works with Claude, GPT-4, Gemini and any MCP-compatible client.
+
+```bash
+npm install -g pseudonym-mcp
+```
+
 ### [macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)
 MCP server for Claude Code & Claude Desktop — local OCR and image analysis via Apple Vision. Files never leave your Mac: no cloud API, no API keys, no network requests. Pre-extracts text before your AI ever sees it, cutting token usage by ~97% on real documents.
 
