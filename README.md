@@ -21,6 +21,20 @@ Architected a modern insurance PWA at CGI achieving a **95% Google Page Speed sc
 
 ## 🛠 Open Source
 
+### [macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)
+MCP server for Claude Code & Claude Desktop — local OCR and image analysis via Apple Vision. Files never leave your Mac: no cloud API, no API keys, no network requests. Pre-extracts text before your AI ever sees it, cutting token usage by ~97% on real documents.
+
+```bash
+npm install -g macos-vision-mcp
+```
+
+### [macos-vision-md](https://github.com/woladi/macos-vision-md)
+Convert images and PDFs to structured Markdown using Apple Vision OCR + a local Ollama model — fully offline, no cloud APIs, no subscriptions.
+
+```bash
+npm install macos-vision-md
+```
+
 ### [macos-vision](https://github.com/woladi/macos-vision)
 Apple Vision OCR & image analysis for Node.js — native, fast, offline, no API keys required.
 
