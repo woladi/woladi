@@ -211,6 +211,41 @@ Your doctor's name, SSN, and diagnosis are tokenised locally. The cloud provider
 
 ---
 
+## ⚡ One-Click Privacy — Built-in Prompt Templates
+
+Instead of typing the full pipeline every time, pseudonym-mcp ships two built-in prompt templates that chain masking, the LLM task, and unmasking automatically.
+
+### `pseudonymize_task` — inline text
+
+```
+/pseudonymize_task text="Meeting with Jan Kowalski (PESEL: 90010112318). Contract: 45 000 zł." task="Extract action items"
+```
+
+What happens:
+1. pseudonym-mcp masks PII locally → `[PERSON:1]`, `[PESEL:1]`
+2. Claude processes the anonymized text
+3. pseudonym-mcp restores originals in the response
+
+Optional `lang` argument: `en` (default) or `pl`.
+
+### `privacy_scan_file` — file or PDF
+
+> Requires **macos-vision-mcp** to be installed alongside pseudonym-mcp.
+
+```
+/privacy_scan_file filePath="/Users/me/vault/contracts/nda.pdf" task="Summarize obligations and deadlines"
+```
+
+What happens:
+1. macos-vision-mcp extracts text from the file locally via Apple Vision
+2. pseudonym-mcp masks all PII before sending anything to the cloud
+3. Claude processes the anonymized content
+4. pseudonym-mcp restores originals before the response is shown
+
+Optional arguments: `task` (default: _summarize the key points_), `lang` (`en` or `pl`).
+
+---
+
 ## 🛡️ What Gets Protected
 
 ### 🇺🇸 English PII (`--lang en`, default)
