@@ -52,6 +52,10 @@ npm install macos-vision
 ### [AiSort](https://github.com/woladi/AiSort) *(early stage)*
 Automatically tags and annotates files using `macos-vision-mcp` and local LLMs — no cloud, no subscriptions. Files never leave your machine. Feed it a better model and it can also suggest smarter folder structures for your documents.
 
+## ✍️ Writing
+
+- [Your Obsidian Vault as a Private Second Brain — Powered by Local AI](https://woladi.github.io/woladi/obsidian-privacy-pipeline) — how to use `macos-vision-mcp` + `pseudonym-mcp` to query your vault with cloud AI without exposing personal data.
+
 ## 💻 Tech Stack
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
