@@ -1,6 +1,6 @@
 # Hey, I'm Adrian 👋
 
-**Design System Architect · Front-end Tech Lead · React & Headless CMS · genAI/DX**
+**Front-end Tech Lead · React & Typescript · genAI/DX**
 
 10+ years building enterprise front-end systems at CGI. I specialize in closing the gap between design and engineering — through scalable component libraries, AI-augmented workflows, and developer experience that actually ships.
 
@@ -69,10 +69,6 @@ Automatically tags and annotates files using `macos-vision-mcp` and local LLMs �
 ![Storyblok](https://img.shields.io/badge/Storyblok-09B3AF?style=flat-square&logo=storyblok&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
 ![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
-
-## 📊 GitHub Activity
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=woladi&show_icons=true&theme=dark&hide_border=true)
 
 ## 📫 Let's Connect
 
