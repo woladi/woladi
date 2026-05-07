@@ -10,7 +10,7 @@ Open to consulting on design system architecture or AI-augmented DX pipelines. �
 
 - **Design Systems** → Scalable UI libraries with Storybook, design tokens, and cross-team governance
 - **Headless CMS** → Storyblok architecture that empowers content teams without dev bottlenecks
-- **AI-Driven Engineering** → MCP, Figma Code Connect, automated design-to-code pipelines
+- **AI-Driven Engineering** → MCP servers, Figma Code Connect, streaming LLM apps in production
 
 ## 🏆 Key Achievement
 
@@ -18,6 +18,15 @@ Architected a modern insurance PWA at CGI achieving a **95% Google Page Speed sc
 - Component library with full Storybook documentation and testing
 - Storyblok integration enabling visual editing independent of dev cycles
 - AI-augmented delivery pipeline using MCP + Figma Code Connect to sync design tokens with production code
+
+## 🔧 Side Project — Production AI App
+
+Solo-built and shipped a full-stack subscription web app currently running in production. Technical highlights:
+
+- **Streaming LLM responses** → Vercel AI SDK + Claude, token-by-token rendering to the client
+- **Custom auth bridge** → Clerk JWT decoded inside Supabase RLS policies (non-standard integration)
+- **Heavy compute in serverless** → C library compiled to WASM, singleton-cached across requests
+- **Subscription billing** → Stripe Checkout with dynamic pricing and promo codes
 
 ## 🛠 Open Source — Privacy-First AI Tooling
 
@@ -63,8 +72,12 @@ Automatically tags and annotates files using `macos-vision-mcp` and local LLMs �
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
 ![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=flat-square&logo=storybook&logoColor=white)
 ![Storyblok](https://img.shields.io/badge/Storyblok-09B3AF?style=flat-square&logo=storyblok&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
