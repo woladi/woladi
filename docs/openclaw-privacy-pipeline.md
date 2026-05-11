@@ -283,6 +283,23 @@ Optional `lang` argument: `en` (default) or `pl`.
 
 ---
 
+## ⚠️ Disclaimer
+
+This pipeline is a **risk-reduction tool, not a guarantee of zero data exposure.**
+
+Pseudonymisation is a compromise by design: it replaces identifiable values with tokens, but the surrounding context — sentence structure, topic, document type, dates, amounts — is still sent to the cloud. A sufficiently determined party with access to LLM logs and additional context could potentially re-identify individuals from that surrounding content alone.
+
+No tool, including `macos-vision-mcp` and `pseudonym-mcp`, can provide a 100% guarantee that personal data will never leak or be inferred. Edge cases exist:
+
+- NER models miss names they haven't seen before or names written unconventionally
+- Regex patterns don't cover every format of every country's ID numbers
+- Contextual clues in the text (job title + city + employer) may be enough to identify someone even without explicit PII
+- Bugs in any software layer — OCR, masking, transport — can cause unexpected behaviour
+
+**Use this pipeline as one layer of a broader privacy strategy, not as a substitute for legal advice, a BAA, or a formal data protection assessment.** If you're handling data subject to strict regulatory requirements (HIPAA, GDPR Article 9 special categories, classified information), consult a qualified professional before relying on any automated pseudonymisation tool.
+
+---
+
 ## 📦 Quick Start Reference
 
 ```bash
