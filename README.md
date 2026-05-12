@@ -1,73 +1,70 @@
 # Hey, I'm Adrian 👋
 
-**Design System Architect · Front-end Tech Lead · React & Headless CMS · genAI/DX**
+**Front-end Tech Lead · React & TypeScript · genAI/DX**
 
-10+ years building enterprise front-end systems at CGI. I specialize in closing the gap between design and engineering — through scalable component libraries, AI-augmented workflows, and developer experience that actually ships.
+10+ years building enterprise front-end systems at CGI. I close the gap between design and engineering — through scalable component libraries, AI-augmented workflows, and developer experience that actually ships.
 
-Open to consulting on design system architecture or AI-augmented DX pipelines. → [Let's talk](mailto:awolczuk@gmail.com)
+### 💼 Available for consulting
 
-## 🚀 What I Do
+- **Design Systems** — component libraries, design tokens, Storybook, cross-team governance
+- **AI-augmented DX** — MCP servers, Figma Code Connect, streaming LLM apps in production
+- **Privacy-first AI** — local inference pipelines, GDPR-compliant LLM integrations
 
-- **Design Systems** → Scalable UI libraries with Storybook, design tokens, and cross-team governance
-- **Headless CMS** → Storyblok architecture that empowers content teams without dev bottlenecks
-- **AI-Driven Engineering** → MCP servers, Figma Code Connect, streaming LLM apps in production
+→ **[awolczuk@gmail.com](mailto:awolczuk@gmail.com)** · [LinkedIn](https://www.linkedin.com/in/adrianwolczuk) · [GitHub](https://github.com/woladi)
 
-## 🏆 Key Achievement
+---
 
-Architected a modern insurance PWA at CGI achieving a **95% Google Page Speed score**:
+## 🏆 Selected Work
+
+### Enterprise PWA · CGI
+Architected a modern insurance PWA achieving a **96% Google Page Speed score**:
 - Component library with full Storybook documentation and testing
 - Storyblok integration enabling visual editing independent of dev cycles
-- AI-augmented delivery pipeline using MCP + Figma Code Connect to sync design tokens with production code
+- AI-augmented delivery pipeline using Figma Code Connect to sync design tokens with production code
 
-## 🔧 Side Project — Production AI App
+### Production SaaS · Solo build
+Full-stack subscription web app shipped to production. Stack highlights:
+- **Streaming LLM responses** — Vercel AI SDK + Claude, token-by-token rendering
+- **Custom auth bridge** — Clerk JWT decoded inside Supabase RLS policies (non-standard integration)
+- **Heavy compute in serverless** — C library compiled to WASM, singleton-cached across requests
+- **Subscription billing** — Stripe Checkout with dynamic pricing and promo codes
 
-Solo-built and shipped a full-stack subscription web app currently running in production. Technical highlights:
+---
 
-- **Streaming LLM responses** → Vercel AI SDK + Claude, token-by-token rendering to the client
-- **Custom auth bridge** → Clerk JWT decoded inside Supabase RLS policies (non-standard integration)
-- **Heavy compute in serverless** → C library compiled to WASM, singleton-cached across requests
-- **Subscription billing** → Stripe Checkout with dynamic pricing and promo codes
+## 🛠 Open Source — Privacy-First AI Ecosystem
 
-## 🛠 Open Source — Privacy-First AI Tooling
+One philosophy across all repos: **AI should work for you, not harvest your data.** Local inference.
 
-All projects share a common philosophy: **AI should work for you, not harvest your data.**
-Local inference. No cloud APIs. No subscriptions.
-
-### [pseudonym-mcp](https://github.com/woladi/pseudonym-mcp)
-Local privacy proxy for LLMs — replaces PII with reversible tokens (`[PERSON:1]`, `[PESEL:1]`, `[CREDIT_CARD:1]`) before your prompt ever reaches the cloud, then restores original values in the response. GDPR-compliant pseudonymisation, fully offline, works with Claude, GPT-4, Gemini and any MCP-compatible client.
+### The privacy proxy
+**[pseudonym-mcp](https://github.com/woladi/pseudonym-mcp)** — replaces PII with reversible tokens (`[PERSON:1]`, `[PESEL:1]`, `[CREDIT_CARD:1]`) before your prompt reaches the cloud, then restores original values in the response. GDPR-compliant pseudonymisation, fully offline, works with Claude, GPT-4, Gemini and any MCP-compatible client.
 
 ```bash
 claude mcp add pseudonym-mcp -- npx pseudonym-mcp
 ```
 
-### [macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)
-MCP server for Claude Code & Claude Desktop — local OCR and image analysis via Apple Vision. Files never leave your Mac: no cloud API, no API keys, no network requests. Pre-extracts text before your AI ever sees it, cutting token usage by ~97% on real documents.
+### The vision stack
+Node.js Apple Vision Middleware four-layer ecosystem for local OCR & image analysis on macOS — same engine, different surfaces:
+
+- **[macos-vision](https://github.com/woladi/macos-vision)** — the foundation. Apple Vision OCR for Node.js, native and fast.
+- **[macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)** — MCP server for Claude Code & Claude Desktop. Pre-extracts text before your AI sees it, cutting token usage by ~97% on real documents.
+- **[macos-vision-md](https://github.com/woladi/macos-vision-md)** — converts images and PDFs to structured Markdown using Apple Vision + a local Ollama model.
+- **[AiSort](https://github.com/woladi/AiSort)** *(early stage)* — auto-tags and annotates files using the stack above. Files never leave your machine.
 
 ```bash
 claude mcp add macos-vision-mcp -- npx macos-vision-mcp
 ```
 
-### [macos-vision-md](https://github.com/woladi/macos-vision-md)
-Convert images and PDFs to structured Markdown using Apple Vision OCR + a local Ollama model — fully offline, no cloud APIs, no subscriptions.
+---
 
-```bash
-npm install macos-vision-md
-```
+## ✍️ Writing
 
-### [macos-vision](https://github.com/woladi/macos-vision)
-Apple Vision OCR & image analysis for Node.js — native, fast, offline, no API keys required.
-
-```bash
-npm install macos-vision
-```
-
-### [AiSort](https://github.com/woladi/AiSort) *(early stage)*
-Automatically tags and annotates files using `macos-vision-mcp` and local LLMs — no cloud, no subscriptions. Files never leave your machine. Feed it a better model and it can also suggest smarter folder structures for your documents.
+**[Your Obsidian Vault as a Private Second Brain — Powered by Local AI](https://woladi.github.io/woladi/obsidian-privacy-pipeline)** — combining `macos-vision-mcp` + `pseudonym-mcp` to query your vault with cloud AI without exposing personal data.
 
 ## ✍️ Writing
 
 - [Your Obsidian Vault as a Private Second Brain — Powered by Local AI](https://woladi.github.io/woladi/obsidian-privacy-pipeline) — how to use `macos-vision-mcp` + `pseudonym-mcp` to query your vault with cloud AI without exposing personal data.
 - [Your Messaging Apps as a Private Document AI — Powered by OpenClaw](https://woladi.github.io/woladi/openclaw-privacy-pipeline) — using `macos-vision-mcp` + `pseudonym-mcp` inside OpenClaw to OCR and anonymise documents sent over WhatsApp, Telegram, or Slack before they reach any cloud LLM.
+---
 
 ## 💻 Tech Stack
 
@@ -83,13 +80,3 @@ Automatically tags and annotates files using `macos-vision-mcp` and local LLMs �
 ![Storyblok](https://img.shields.io/badge/Storyblok-09B3AF?style=flat-square&logo=storyblok&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
 ![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
-
-## 📊 GitHub Activity
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=woladi&show_icons=true&theme=dark&hide_border=true)
-
-## 📫 Let's Connect
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adrianwolczuk)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:awolczuk@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/woladi)
