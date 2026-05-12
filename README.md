@@ -55,11 +55,6 @@ claude mcp add macos-vision-mcp -- npx macos-vision-mcp
 ```
 
 ---
-
-## ✍️ Writing
-
-**[Your Obsidian Vault as a Private Second Brain — Powered by Local AI](https://woladi.github.io/woladi/obsidian-privacy-pipeline)** — combining `macos-vision-mcp` + `pseudonym-mcp` to query your vault with cloud AI without exposing personal data.
-
 ## ✍️ Writing
 
 - [Your Obsidian Vault as a Private Second Brain — Powered by Local AI](https://woladi.github.io/woladi/obsidian-privacy-pipeline) — how to use `macos-vision-mcp` + `pseudonym-mcp` to query your vault with cloud AI without exposing personal data.
