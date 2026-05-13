@@ -47,7 +47,6 @@ Node.js Apple Vision Middleware four-layer ecosystem for local OCR & image analy
 
 - **[macos-vision](https://github.com/woladi/macos-vision)** — the foundation. Apple Vision OCR for Node.js, native and fast.
 - **[macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)** — MCP server for Claude Code & Claude Desktop. Pre-extracts text before your AI sees it, cutting token usage by ~97% on real documents.
-- **[macos-vision-md](https://github.com/woladi/macos-vision-md)** — converts images and PDFs to structured Markdown using Apple Vision + a local Ollama model.
 - **[AiSort](https://github.com/woladi/AiSort)** *(early stage)* — auto-tags and annotates files using the stack above. Files never leave your machine.
 
 ```bash
