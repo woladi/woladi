@@ -1,74 +1,78 @@
 # Hey, I'm Adrian 👋
 
-**Design System Architect · Front-end Tech Lead · React & Headless CMS · genAI/DX**
+**Front-end Tech Lead · React & TypeScript · genAI/DX**
 
-10+ years building enterprise front-end systems at CGI. I specialize in closing the gap between design and engineering — through scalable component libraries, AI-augmented workflows, and developer experience that actually ships.
+10+ years building enterprise front-end systems at CGI. I close the gap between design and engineering — through scalable component libraries, AI-augmented workflows, and developer experience that actually ships.
 
-[LinkedIn](https://www.linkedin.com/in/adrianwolczuk)
+### 💼 Available for consulting
 
-## 🚀 What I Do
+- **Design Systems** — component libraries, design tokens, Storybook, cross-team governance
+- **AI-augmented DX** — MCP servers, Figma Code Connect, streaming LLM apps in production
+- **Privacy-first AI** — local inference pipelines, GDPR-compliant LLM integrations
 
-- **Design Systems** → Scalable UI libraries with Storybook, design tokens, and cross-team governance
-- **Headless CMS** → Storyblok architecture that empowers content teams without dev bottlenecks
-- **AI-Driven Engineering** → MCP, Figma Code Connect, automated design-to-code pipelines
+→ **[awolczuk@gmail.com](mailto:awolczuk@gmail.com)** · [LinkedIn](https://www.linkedin.com/in/adrianwolczuk) · [GitHub](https://github.com/woladi)
 
-## 🏆 Key Achievement
+---
 
-Architected a modern insurance PWA at CGI achieving a **95% Google Page Speed score**:
+## 🏆 Selected Work
+
+### Enterprise PWA · CGI
+Architected a modern insurance PWA achieving a **96% Google Page Speed score**:
 - Component library with full Storybook documentation and testing
 - Storyblok integration enabling visual editing independent of dev cycles
-- AI-augmented delivery pipeline using MCP + Figma Code Connect to sync design tokens with production code
+- AI-augmented delivery pipeline using Figma Code Connect to sync design tokens with production code
 
-## 🛠 Open Source
+### Production SaaS · Solo build
+Full-stack subscription web app shipped to production. Stack highlights:
+- **Streaming LLM responses** — Vercel AI SDK + Claude, token-by-token rendering
+- **Custom auth bridge** — Clerk JWT decoded inside Supabase RLS policies (non-standard integration)
+- **Heavy compute in serverless** — C library compiled to WASM, singleton-cached across requests
+- **Subscription billing** — Stripe Checkout with dynamic pricing and promo codes
 
-### [pseudonym-mcp](https://github.com/woladi/pseudonym-mcp)
-Local privacy proxy for LLMs — replaces PII with reversible tokens (`[PERSON:1]`, `[PESEL:1]`, `[CREDIT_CARD:1]`) before your prompt ever reaches the cloud, then restores original values in the response. GDPR-compliant pseudonymisation, fully offline, works with Claude, GPT-4, Gemini and any MCP-compatible client.
+---
+
+## 🛠 Open Source — Privacy-First AI Ecosystem
+
+One philosophy across all repos: **AI should work for you, not harvest your data.** Local inference.
+
+### The privacy proxy
+**[pseudonym-mcp](https://github.com/woladi/pseudonym-mcp)** — replaces PII with reversible tokens (`[PERSON:1]`, `[PESEL:1]`, `[CREDIT_CARD:1]`) before your prompt reaches the cloud, then restores original values in the response. GDPR-compliant pseudonymisation, fully offline, works with Claude, GPT-4, Gemini and any MCP-compatible client.
 
 ```bash
 claude mcp add pseudonym-mcp -- npx pseudonym-mcp
 ```
 
-### [macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)
-MCP server for Claude Code & Claude Desktop — local OCR and image analysis via Apple Vision. Files never leave your Mac: no cloud API, no API keys, no network requests. Pre-extracts text before your AI ever sees it, cutting token usage by ~97% on real documents.
+### The vision stack
+Node.js Apple Vision Middleware four-layer ecosystem for local OCR & image analysis on macOS — same engine, different surfaces:
+
+- **[macos-vision](https://github.com/woladi/macos-vision)** — the foundation. Apple Vision OCR for Node.js, native and fast.
+- **[macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)** — MCP server for Claude Code & Claude Desktop. Pre-extracts text before your AI sees it, cutting token usage by ~97% on real documents.
+- **[AiSort](https://github.com/woladi/AiSort)** *(early stage)* — auto-tags and annotates files using the stack above. Files never leave your machine.
 
 ```bash
 claude mcp add macos-vision-mcp -- npx macos-vision-mcp
 ```
 
-### [macos-vision-md](https://github.com/woladi/macos-vision-md)
-Convert images and PDFs to structured Markdown using Apple Vision OCR + a local Ollama model — fully offline, no cloud APIs, no subscriptions.
-
-```bash
-npm install macos-vision-md
-```
-
-### [macos-vision](https://github.com/woladi/macos-vision)
-Apple Vision OCR & image analysis for Node.js — native, fast, offline, no API keys required.
-
-```bash
-npm install macos-vision
-```
-
-### [AiSort](https://github.com/woladi/AiSort) *(early stage)*
-Automatically tags and annotates files using `macos-vision-mcp` and local LLMs — no cloud, no subscriptions. Files never leave your machine. Feed it a better model and it can also suggest smarter folder structures for your documents.
-
+---
 ## ✍️ Writing
 
 - [Your Obsidian Vault as a Private Second Brain — Powered by Local AI](https://woladi.github.io/woladi/obsidian-privacy-pipeline) — how to use `macos-vision-mcp` + `pseudonym-mcp` to query your vault with cloud AI without exposing personal data.
+- [Your Messaging Apps as a Private Document AI — Powered by OpenClaw](https://woladi.github.io/woladi/openclaw-privacy-pipeline) — using `macos-vision-mcp` + `pseudonym-mcp` inside OpenClaw to OCR and anonymise documents sent over WhatsApp, Telegram, or Slack before they reach any cloud LLM.
+- [Apple Vision vs Tesseract — A 50-File OCR-to-Markdown Benchmark](https://woladi.github.io/woladi/macos-vision-vs-tesseract-ocr-benchmark) — head-to-head OCR comparison on 50 PDFs with identical LLM formatter input; Tesseract wins on CER, Apple Vision wins on structural quality.
+- [Privacy Tiers for Document AI — Three Pipeline Configurations](https://woladi.github.io/woladi/document-ai-privacy-tiers) — fully local vs local OCR + cloud LLM vs local OCR + pseudonymisation + cloud LLM: what each configuration protects, where the trade-offs are, and how to choose.
+---
 
 ## 💻 Tech Stack
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vuedotjs&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
-![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=flat&logo=storybook&logoColor=white)
-![Storyblok](https://img.shields.io/badge/Storyblok-09B3AF?style=flat&logo=storyblok&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=figma&logoColor=white)
-![Swift](https://img.shields.io/badge/Swift-F05138?style=flat&logo=swift&logoColor=white)
-
-## 📫 Let's Connect
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adrianwolczuk)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:awolczuk@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/woladi)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white)
+![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=flat-square&logo=storybook&logoColor=white)
+![Storyblok](https://img.shields.io/badge/Storyblok-09B3AF?style=flat-square&logo=storyblok&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
