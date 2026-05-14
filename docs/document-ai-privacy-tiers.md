@@ -1,5 +1,7 @@
 # 🔒 Privacy Tiers for Document AI — Three Pipeline Configurations
 
+![Privacy-First AI Pipelines](img/privacy-pdf-pipeline.png)
+
 > One OCR engine. Three trust models. A practical guide to choosing how much of your document processing stays on your machine.
 
 ---
