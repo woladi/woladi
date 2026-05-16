@@ -60,6 +60,7 @@ claude mcp add macos-vision-mcp -- npx macos-vision-mcp
 - [Your Messaging Apps as a Private Document AI — Powered by OpenClaw](https://woladi.github.io/woladi/openclaw-privacy-pipeline) — using `macos-vision-mcp` + `pseudonym-mcp` inside OpenClaw to OCR and anonymise documents sent over WhatsApp, Telegram, or Slack before they reach any cloud LLM.
 - [Apple Vision vs Tesseract — A 50-File OCR-to-Markdown Benchmark](https://woladi.github.io/woladi/macos-vision-vs-tesseract-ocr-benchmark) — head-to-head OCR comparison on 50 PDFs with identical LLM formatter input; Tesseract wins on CER, Apple Vision wins on structural quality.
 - [Privacy Tiers for Document AI — Three Pipeline Configurations](https://woladi.github.io/woladi/document-ai-privacy-tiers) — fully local vs local OCR + cloud LLM vs local OCR + pseudonymisation + cloud LLM: what each configuration protects, where the trade-offs are, and how to choose.
+- [LLM as a Bridge Between Qualitative and Quantitative Research in Psychology and Sociology](https://woladi.github.io/woladi/llm-qual-quant-bridging) — using LLM-as-coder and LLM-as-judge to classify interviews, project free-form text onto validated scales (PHQ-9, BDI-II, SF-36), and correlate the result with survey data — with bias, non-determinism, and IRB caveats.
 ---
 
 ## 💻 Tech Stack
