@@ -44,7 +44,7 @@ Node.js Apple Vision ecosystem for local OCR & image analysis on macOS — same 
 
 - **[macos-vision](https://github.com/woladi/macos-vision)** — the foundation. Apple Vision OCR for Node.js, native and fast.
 - **[macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)** — MCP server for Claude Code & Claude Desktop. Pre-extracts text before your AI sees it, cutting token usage by ~97% on real documents.
-- **[sortai](https://github.com/woladi/sortai)** — auto-tags and annotates files using the stack above. Files never leave your machine.
+- **[sortai](https://github.com/woladi/sortai)** — macOS CLI that scans a folder, OCRs every PDF and image with Apple Vision, and writes native **Finder tags** (`#Faktura`, `#Umowa`, `#Bank`…) and **Finder comments** directly into file metadata — so your documents become searchable in Spotlight and browsable by tag in Finder, with no extra database. Runs fully offline via local Ollama by default; cloud LLMs optional. When cloud mode is enabled, integrates `pseudonym-mcp` to mask PII before anything leaves the machine.
 
 ```bash
 claude mcp add macos-vision-mcp -- npx macos-vision-mcp
