@@ -1,7 +1,5 @@
 # Adrian Wołczuk
 
-> 🏖️ On vacation until end of week — back Monday.
-
 **Staff Front-end Engineer · Design Systems · Privacy-First AI Infrastructure**
 
 I design enterprise-scale front-end architectures and build local-first infrastructure for AI agents.
