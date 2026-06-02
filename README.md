@@ -50,6 +50,9 @@ Node.js Apple Vision ecosystem for local OCR & image analysis on macOS — same 
 claude mcp add macos-vision-mcp -- npx macos-vision-mcp
 ```
 
+### The legal verifier
+**[sententim](https://github.com/woladi/sententim)** — deterministic MCP server that verifies whether a Polish court judgment signature actually exists before you cite it. LLMs hallucinate legal case numbers; this tool makes them stop. Zero LLM at runtime — purely SQLite + FTS5 lookups, sub-10ms, fully offline. Returns `FOUND`, `NOT_FOUND`, or `AMBIGUOUS` against a local database built from SAOS public data.
+
 ---
 
 ## ✍️ Writing
