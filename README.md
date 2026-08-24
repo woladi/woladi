@@ -53,8 +53,7 @@ claude mcp add pseudonym-mcp -- npx pseudonym-mcp
 Node.js Apple Vision ecosystem for local OCR & image analysis on macOS — same engine, different surfaces:
 
 - **[macos-vision](https://github.com/woladi/macos-vision)** — the foundation. Apple Vision OCR for Node.js, native and fast.
-- **[macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)** — MCP server for Claude Code & Claude Desktop. Pre-extracts text before your AI sees it, cutting token usage by ~97% on real documents. Also does on-device UI testing: screenshots, accessibility trees, and element lookup — nothing leaves the machine.
-- **macos-vision-mcp v2** *(in progress)* — built on the newest Apple Vision capabilities: live web-page operation for agents, fully on-device. Combined with `pseudonym-mcp`, this raises the ceiling on what an agent can safely automate on the web.
+- **[macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)** — MCP server for Claude Code & Claude Desktop. Pre-extracts text before your AI sees it, cutting token usage by ~97% on real documents. Also does on-device UI testing: screenshots, accessibility trees, and element lookup — nothing leaves the machine. Built on the newest Apple Vision capabilities: live web-page operation for agents, fully on-device. Combined with `pseudonym-mcp`, this raises the ceiling on what an agent can safely automate on the web.
 - **[sortai](https://github.com/woladi/sortai)** — macOS CLI that OCRs every PDF and image in a folder with Apple Vision and writes native **Finder tags** (`#Faktura`, `#Umowa`, `#Bank`…) and **comments** into file metadata — instantly searchable in Spotlight, no database. Offline via Ollama by default; cloud LLMs optional, with `pseudonym-mcp` masking PII first.
 
 ```bash
