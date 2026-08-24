@@ -1,17 +1,26 @@
 # Adrian Wołczuk
 
-**Staff Front-end Engineer · Design Systems · Privacy-First AI Infrastructure**
+**Staff Product Engineer · Agentic AI Workflows · Privacy-First AI Infrastructure · Design Systems**
 
-I ship production systems end-to-end — from design systems and front-end architecture to local-first AI infrastructure.
-15+ years of professional experience, most recently as Front-end Tech Lead at CGI. Solo-built a subscription SaaS and a 4-tool privacy AI ecosystem.
+I ship production systems end-to-end — from front-end architecture and design systems to local-first AI infrastructure.
+Currently on contract with a major tech company, building a new platform where **agentic coding is the daily workflow** — orchestrating coding agents at serious token budgets, owning features end-to-end across web and native surfaces.
+15+ years of professional experience (CGI, KPMG, Acxiom). Solo-built a subscription SaaS and a privacy-first AI tool ecosystem.
 
-Open to **founding / staff engineering roles**, **technical co-founder** opportunities, and **selective consulting**.
+Open to **founding / staff engineering roles**, **technical co-founder** opportunities, and **selective consulting** — Q4 2026 availability.
 
 → awolczuk [at] gmail [dot] com · [LinkedIn](https://www.linkedin.com/in/adrianwolczuk) · Warsaw · Remote
 
 ---
 
 ## 🏆 Selected Work
+
+### Enterprise Agentic Platform · 2026
+
+Building a greenfield platform for a major tech company with agentic coding as the core delivery model:
+
+- Orchestrating coding agents end-to-end — architecture, agent direction, review, and quality gates on agent output
+- Token budgets of hundreds of dollars per engineer per day — production-scale agentic development, not experimentation
+- Full features shipped across web and native surfaces, from design-system components to complete integrations
 
 ### Enterprise PWA · CGI
 Architected a modern insurance PWA achieving a **96% Google Page Speed score**:
@@ -34,6 +43,7 @@ One philosophy across all repos: **AI should work for you, not harvest your data
 
 ### The privacy proxy
 **[pseudonym-mcp](https://github.com/woladi/pseudonym-mcp)** — replaces PII with reversible tokens (`[PERSON:1]`, `[PESEL:1]`, `[CREDIT_CARD:1]`) before your prompt reaches the cloud, then restores original values in the response. GDPR-compliant pseudonymisation, fully offline, works with Claude, GPT-4, Gemini and any MCP-compatible client.
+Early-stage with an active roadmap — the direction is a deterministic sanitization layer for any agent workflow touching sensitive data.
 
 ```bash
 claude mcp add pseudonym-mcp -- npx pseudonym-mcp
@@ -43,7 +53,8 @@ claude mcp add pseudonym-mcp -- npx pseudonym-mcp
 Node.js Apple Vision ecosystem for local OCR & image analysis on macOS — same engine, different surfaces:
 
 - **[macos-vision](https://github.com/woladi/macos-vision)** — the foundation. Apple Vision OCR for Node.js, native and fast.
-- **[macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)** — MCP server for Claude Code & Claude Desktop. Pre-extracts text before your AI sees it, cutting token usage by ~97% on real documents.
+- **[macos-vision-mcp](https://github.com/woladi/macos-vision-mcp)** — MCP server for Claude Code & Claude Desktop. Pre-extracts text before your AI sees it, cutting token usage by ~97% on real documents. Also does on-device UI testing: screenshots, accessibility trees, and element lookup — nothing leaves the machine.
+- **macos-vision-mcp v2** *(in progress)* — built on the newest Apple Vision capabilities: live web-page operation for agents, fully on-device. Combined with `pseudonym-mcp`, this raises the ceiling on what an agent can safely automate on the web.
 - **[sortai](https://github.com/woladi/sortai)** — macOS CLI that OCRs every PDF and image in a folder with Apple Vision and writes native **Finder tags** (`#Faktura`, `#Umowa`, `#Bank`…) and **comments** into file metadata — instantly searchable in Spotlight, no database. Offline via Ollama by default; cloud LLMs optional, with `pseudonym-mcp` masking PII first.
 
 ```bash
